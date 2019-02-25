@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import data from "../data";
+import React from "react";
+
 import Nav from "./Nav";
 import styled from "styled-components";
 import "./Nav.scss";
@@ -24,15 +24,7 @@ const NavigationDiv = styled.div`
 `;
 
 const NavWrapper = () => {
-  const categories = [
-    "Mac",
-    "iPad",
-    "iPhone",
-    "Watch",
-    "TV",
-    "Music",
-    "Support"
-  ];
+  const categories = ["Mac", "iPad", "iPhone", "Watch", "TV", "Music"];
 
   return (
     <NavigationDiv>
@@ -40,6 +32,7 @@ const NavWrapper = () => {
       {categories.map(category => (
         <Nav key={category} category={category} />
       ))}
+      <h2>Support</h2>
       <i class="fas fa-search" />
       <i class="fas fa-shopping-cart" />
     </NavigationDiv>

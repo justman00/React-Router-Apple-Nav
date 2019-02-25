@@ -7,6 +7,7 @@ const App = () => {
   return (
     <div>
       <NavWrapper />
+      <Route exact path="/" />
       <Route path="/:product" component={SubNav} />
     </div>
   );

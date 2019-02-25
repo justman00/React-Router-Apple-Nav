@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Nav from "./Nav";
 import styled from "styled-components";
@@ -28,7 +29,9 @@ const NavWrapper = () => {
 
   return (
     <NavigationDiv>
-      <i class="fab fa-apple" />
+      <Link style={{ color: "white", textDecoration: "none" }} to="/">
+        <i class="fab fa-apple" />
+      </Link>
       {categories.map(category => (
         <Nav key={category} category={category} />
       ))}
